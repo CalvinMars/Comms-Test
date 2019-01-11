@@ -2,18 +2,21 @@
 # by Jason Pruim and Joel Muyskens based on digi.xBee github
 
 # imports other tests from directory
-import TestSend1
-import TestReceive2
+from TestSend1 import *
+from TestReceive2 import *
 
 
 # if main program then define defaults and run 2 tests,
-
-if __name__ ==__main__ :
+def test_comms2():
     # values to be changed on different computers
     port = "COM3"
     baud = 19200
     print("Start tests")
     test_receive2(port, baud)
     test_send1(port, baud)
-
     print("Tests Completed")
+
+
+if __name__ == '__main__ ':
+    test_comms2()
+
